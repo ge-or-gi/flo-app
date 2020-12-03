@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-customer-detail',
   templateUrl: './customer-detail.component.html',
@@ -11,29 +10,29 @@ export class CustomerDetailComponent implements OnInit {
 
   suggestions = [
     {name: 'asd12',
-  url: 'https://placeimg.com/150/150/any'},
+  url: 'https://placeimg.com/100/100/any'},
   {name: 'asfdsdasdf ',
-  url: 'https://placeimg.com/150/150/animals'},
+  url: 'https://placeimg.com/100/100/animals'},
   {name: 'tut jgnv',
-  url: 'https://placeimg.com/150/150/arch'},
+  url: 'https://placeimg.com/100/100/arch'},
   {name: 'kio fx',
-  url: 'https://placeimg.com/150/150/nature'},
+  url: 'https://placeimg.com/100/100/nature'},
   {name: 'ddfdfdh',
-  url: 'https://placeimg.com/150/150/people'},
+  url: 'https://placeimg.com/100/100/people'},
   {name: 'poi njekn m',
-  url: 'https://placeimg.com/150/150/tech'},
+  url: 'https://placeimg.com/100/100/tech'},
   {name: 'asde, oio',
-  url: 'https://placeimg.com/150/150/grayscale'},
+  url: 'https://placeimg.com/100/100/grayscale'},
   {name: 'jashdkjahdja ',
-  url: 'https://placeimg.com/150/150/sepia'},
+  url: 'https://placeimg.com/100/100/sepia'},
   {name: '154er ir',
-  url: 'https://placeimg.com/150/150/animals'},
+  url: 'https://placeimg.com/100/100/animals'},
   {name: 'poip 45t',
-  url: 'https://placeimg.com/150/150/arch'},
+  url: 'https://placeimg.com/100/100/arch'},
   {name: 'ader46 hjh',
-  url: 'https://placeimg.com/150/150/nature'},
+  url: 'https://placeimg.com/100/100/nature'},
   {name: 'asasd 2',
-  url: 'https://placeimg.com/150/150/people'},
+  url: 'https://placeimg.com/100/100/people'},
   ];
 
   user = {
@@ -41,8 +40,12 @@ export class CustomerDetailComponent implements OnInit {
     lastname: 'Charlie',
     email: 'lastname@forname.com',
     mobile: '+359878717171',
+    passportnumber: '456789123',
+    image: 'https://placeimg.com/100/100/people',
     suggestions: this.suggestions,
-    todo: this.todo
+    todo: this.todo,
+    transactions: [],
+    usersettings: []
   };
 
   constructor() { }

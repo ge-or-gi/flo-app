@@ -1,2 +1,9 @@
-
-<router-outlet></router-outlet>
+<div class="container">
+  <aside class="side-nav">
+    <div class="nav"><a routerLink="customer-detail" routerLinkActive="active">Customer Details</a></div>
+    <div class="nav"><a routerLink="account-details" routerLinkActive="active">Account Details</a></div>
+  </aside>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

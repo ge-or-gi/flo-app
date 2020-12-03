@@ -2,6 +2,10 @@
   display: flex;
   gap: 16px;
   flex-direction: column;
+  .top-bar{
+    display: flex;
+    align-items: center;
+  }
   .main {
     display: flex;
     flex-direction: row;
