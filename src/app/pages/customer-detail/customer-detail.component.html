@@ -1,25 +1,12 @@
 <app-grid>
   <ng-container slot="top">
-    <h1>Customer Name</h1>
+    <h1>{{user.firstname}} {{user.lastname}}</h1>
   </ng-container>
   <ng-container slot="area-one">
     <app-todo [todos]="todo"></app-todo>
   </ng-container>
-  <ng-container slot="area-two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam non corrupti itaque
-    ad repellat repellendus, dignissimos sint numquam, placeat vitae expedita fugiat magnam officia quibusdam veritatis,
-    molestiae quidem atque debitis.
-    Eius cupiditate dolorum, architecto porro quia earum eos, nihil reiciendis tenetur qui deserunt laborum cum dolore.
-    Velit eveniet, provident incidunt, magni quibusdam eos, totam sint ratione eligendi culpa tempora aliquid.
-    Minima dolorem fuga libero blanditiis esse nemo cupiditate saepe corrupti placeat non illo, unde odio molestiae
-    harum quisquam repellat! Esse repudiandae voluptates voluptatem, maiores ut consectetur temporibus assumenda id
-    natus.
-    Tenetur ut quod alias impedit, a, ab praesentium nostrum veritatis illo tempora velit aliquid natus corrupti
-    molestiae cupiditate. Saepe facilis suscipit fugit ratione sunt dicta iste quod, repudiandae exercitationem
-    blanditiis.
-    Assumenda, iusto vel dolorem minus, aliquid non odio, accusantium pariatur cumque mollitia quos quia dicta
-    consectetur amet quibusdam officiis sunt possimus libero reprehenderit illum. Suscipit placeat cum culpa voluptas
-    voluptate.</ng-container>
-  <ng-container slot="bottom">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus accusantium in
-    consequuntur distinctio saepe atque tempora eius aut, perferendis voluptas dolor, repellat sapiente consequatur
-    minima harum autem sed quos animi!</ng-container>
+  <ng-container slot="area-two">
+    <app-suggestions [suggestions]="suggestions"></app-suggestions>
+  </ng-container>
+  <ng-container slot="bottom">mobile: {{user.mobile}} | email: <a href="mailto:{{user.email}}">{{user.email}}</a> </ng-container>
 </app-grid>
