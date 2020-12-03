@@ -1,0 +1,15 @@
+.container  {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .area-one {
+    flex: 4;
+  }
+  .area-two {
+    flex: 5;
+  }
+}
