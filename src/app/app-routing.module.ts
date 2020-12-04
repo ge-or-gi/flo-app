@@ -18,6 +18,8 @@ const routes: Routes = [
         (m) => m.AccountDetailsModule
       ),
   },
+  { path: '', pathMatch: 'full', redirectTo: 'customer-detail' },
+  { path: '**', redirectTo: 'customer-detail' }
 ];
 
 @NgModule({
