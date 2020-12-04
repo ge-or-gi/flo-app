@@ -1,6 +1,6 @@
 <app-grid>
   <ng-container slot="top">
-    <h1>{{user.firstname}} {{user.lastname}}</h1>
+    <mat-toolbar color="primary">{{user.firstname}} {{user.lastname}}</mat-toolbar>
   </ng-container>
   <ng-container slot="area-one">
     <app-todo [todos]="todo"></app-todo>
@@ -8,5 +8,10 @@
   <ng-container slot="area-two">
     <app-suggestions [suggestions]="suggestions"></app-suggestions>
   </ng-container>
-  <ng-container slot="bottom">mobile: {{user.mobile}} | email: <a href="mailto:{{user.email}}">{{user.email}}</a> </ng-container>
+  <ng-container slot="bottom">
+    <mat-card class="align-center">
+      Mobile:&nbsp; <mat-icon>call</mat-icon>&nbsp; <a href="tel:{{user.mobile}}">{{user.mobile}}</a> &nbsp; | Email:&nbsp; <mat-icon>email</mat-icon>&nbsp; <a href="mailto:{{user.email}}">{{user.email}}</a>
+    </mat-card>
+    <br>
+  </ng-container>
 </app-grid>
