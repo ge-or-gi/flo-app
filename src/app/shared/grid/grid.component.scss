@@ -5,10 +5,12 @@
   .top-bar{
     display: flex;
     align-items: center;
+    margin: 0px -16px 0 -16px;
   }
   .main {
     display: flex;
     flex-direction: row;
+    gap: 16px;
   }
   .area-one {
     flex: 4;
