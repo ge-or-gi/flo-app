@@ -1,9 +1,14 @@
-<div class="container">
-  <aside class="side-nav">
-    <div class="nav"><a routerLink="customer-detail" routerLinkActive="active">Customer Details</a></div>
-    <div class="nav"><a routerLink="account-details" routerLinkActive="active">Account Details</a></div>
-  </aside>
-  <main class="main">
+<mat-toolbar color="primary" class="mat-elevation-z15 topbar">ACME app</mat-toolbar>
+<mat-sidenav-container class="">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <mat-nav-list role="list">
+      <a mat-list-item routerLink="customer-detail" routerLinkActive="active">Customer Details</a>
+      <a mat-list-item routerLink="account-details" routerLinkActive="active">Account Details</a>
+      <a mat-list-item routerLink="dynamic-form" routerLinkActive="active">Dynamic Form</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
     <router-outlet></router-outlet>
-  </main>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

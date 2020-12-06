@@ -1,0 +1,6 @@
+<span [class.disabled]="disabled">
+  <button class="flo-btn" (click)="clicked.emit($event)" [disabled]="disabled"
+    [ngClass]="{'btn-large':btnSize==='large', 'btn-small':btnSize==='small', 'btn-medium':btnSize==='medium'}">
+    <ng-content></ng-content>
+  </button>
+</span>

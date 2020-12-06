@@ -1,0 +1,24 @@
+
+    <table mat-table [dataSource]="transactions" class="mat-elevation-z8 table-fixed">
+
+      <!-- Currency -->
+      <ng-container matColumnDef="Currency">
+        <th mat-header-cell *matHeaderCellDef> Currency</th>
+        <td mat-cell *matCellDef="let item"> {{item.currency}} </td>
+      </ng-container>
+
+      <!-- Ammount -->
+      <ng-container matColumnDef="Ammount">
+        <th mat-header-cell *matHeaderCellDef> Ammount </th>
+        <td mat-cell *matCellDef="let item"> {{item.ammount | currency:item.currency}} </td>
+      </ng-container>
+
+      <!-- Date -->
+      <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let item"> {{item.date | date}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['Currency', 'Ammount', 'Date']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['Currency', 'Ammount', 'Date'];"></tr>
+    </table>

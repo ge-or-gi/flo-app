@@ -1,60 +1,17 @@
 <app-grid>
   <ng-container slot="top">
-    <img src="{{user.image}}" alt="user.lastname" style="border-radius: 75px; margin-right: 16px;"><h1>passport #: {{user.passportnumber}}, avatar</h1>
+    <mat-toolbar color="primary">
+      <img src="{{user.image}}" alt="user.lastname" style="border-radius: 75px; margin-right: 16px; height: 50px;">
+      <h1>passport #: {{user.passportnumber}}</h1>
+    </mat-toolbar>
   </ng-container>
   <ng-container slot="area-one">
-    <table>
-      <thead>
-        <tr>
-          <th>Currency</th>
-          <th>Ammount</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <colgroup>
-        <col style="text-align: right; width: 150px;">
-        <col style="text-align: right; width: 150px;">
-        <col style="text-align: right; width: 150px;">
-      </colgroup>
-      <tbody>
-        <tr *ngFor="let item of user.transactions">
-          <td>{{item.currency | uppercase}}</td>
-          <td>{{item.ammount | currency:item.currency}}</td>
-          <td>{{item.date | date}}</td>
-        </tr>
-      </tbody>
-    </table>
-
+    <app-account-history [transactions]="user.transactions"></app-account-history>
   </ng-container>
   <ng-container slot="area-two">
-    <form action="">
-      <fieldset>
-        <legend>Notifications</legend>
-
-        <label for="email">Email</label>
-        <input type="checkbox" id="email">
-        <br>
-        <label for="desktop">Desktop</label>
-        <input type="checkbox" id="desktop">
-        <br>
-        <label for="sms">Sms</label>
-        <input type="checkbox" id="sms">
-
-      </fieldset>
-    </form>
-
-
+    <app-account-settings></app-account-settings>
   </ng-container>
   <ng-container slot="bottom">
-    <form action="">
-      <fieldset>
-        <legend>Feedback Form</legend>
-        <label for="email">email</label>
-        <input type="email" id="email">
-        <br>
-        <label for="message">message</label>
-        <input type="texarea" name="message" id="message">
-      </fieldset>
-    </form>
+    <app-account-feedback [email]="user.email"></app-account-feedback>
   </ng-container>
 </app-grid>
