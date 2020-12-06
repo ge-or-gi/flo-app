@@ -18,6 +18,7 @@ import {ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatAutocompleteModule, MatNativeDateModule, MatRadioModule } from '@angular/material';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { FloButtonComponent } from './flo-button/flo-button.component';
 
 
 
@@ -25,7 +26,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 
 const components = [
   GridComponent,
-  TodoComponent];
+  TodoComponent,
+  FloButtonComponent];
 
 const modules = [
   CommonModule,
