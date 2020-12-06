@@ -82,4 +82,9 @@ export class DynamicFormComponent implements OnInit {
     this.formValid = this.documnetsForm.status;
   }
 
+  click(ev){
+    console.log(ev);
+
+  }
+
 }
