@@ -14,6 +14,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatAutocompleteModule, MatNativeDateModule, MatRadioModule } from '@angular/material';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -34,7 +38,14 @@ const modules = [
   MatTableModule,
   MatInputModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
+  ReactiveFormsModule,
+  MatFormFieldModule,
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatAutocompleteModule,
+  FormsModule
 ];
 
 @NgModule({
