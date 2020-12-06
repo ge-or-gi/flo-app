@@ -18,8 +18,15 @@ const routes: Routes = [
         (m) => m.AccountDetailsModule
       ),
   },
+  {
+    path: 'dynamic-form',
+    loadChildren: () =>
+      import('./pages/dynamic-form/dynamic-form.module').then(
+        (m) => m.DynamicFormModule
+      ),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'customer-detail' },
-  { path: '**', redirectTo: 'customer-detail' }
+  { path: '**', redirectTo: 'customer-detail' },
 ];
 
 @NgModule({
